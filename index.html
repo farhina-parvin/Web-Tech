@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="../WebTech/style.css">
+  <script defer src="../WebTech/regForm.js"></script>
+</head>
+<body>
+  <div class="container">
+    
+    <h2>Donor Information</h2>
+    <form id="donorForm" onsubmit="return validateForm()">
+
+      <!-- Donor Information -->
+      <label>First Name:</label>
+      <input type="text" id="firstName" onblur="checkFirstName()">
+      <p id="firstNameError" class="error"></p>
+
+      <label>Last Name:</label>
+      <input type="text" id="lastName" onblur="checkLastName()">
+      <p id="lastNameError" class="error"></p>
+
+      <label>Company:</label>
+      <input type="text" id="company">
+
+      <label>Address 1:</label>
+      <input type="text" id="address1">
+
+      <label>Address 2:</label>
+      <input type="text" id="address2">
+
+      <label>City:</label>
+      <input type="text" id="city">
+
+      <label>State:</label>
+      <input type="text" id="state">
+
+      <label>Zip Code:</label>
+      <input type="text" id="zip">
+
+      <label>Country:</label>
+      <input type="text" id="country">
+
+      <label>Phone:</label>
+      <input type="text" id="phone">
+
+      <label>Email:</label>
+      <input type="email" id="email" onblur="checkEmail()">
+      <p id="emailError" class="error"></p>
+
+      <label>Donation Amount:</label>
+      <div class="donation-options">
+        <input type="radio" name="amount" value="50"> $50
+        <input type="radio" name="amount" value="100"> $100
+        <input type="radio" name="amount" value="250"> $250
+        <input type="radio" name="amount" value="Other"> Other
+      </div>
+
+      <label>Other Amount:</label>
+      <input type="text" id="otherAmount" placeholder="$">
+
+      <label>Payment Method:</label>
+      <div class="payment">
+        <input type="radio" name="payment" value="Credit Card"> Credit Card
+        <input type="radio" name="payment" value="Check"> Check
+      </div>
+
+      <hr>
+
+      <!-- Honorarium and Memorial Donation Information -->
+      <h2>Honorarium and Memorial Donation Information</h2>
+
+      <label>I would like to make this donation:</label>
+      <div class="donation-type">
+        <input type="radio" name="donationType" value="Honor"> In Honor Of
+        <input type="radio" name="donationType" value="Memory"> In Memory Of
+      </div>
+
+      <label>Name:</label>
+      <input type="text" id="honorName">
+
+      <label>Please send acknowledgment to:</label>
+      <input type="text" id="ackName" placeholder="Name">
+
+      <label>Address:</label>
+      <input type="text" id="ackAddress">
+
+      <label>City:</label>
+      <input type="text" id="ackCity">
+
+      <label>State:</label>
+      <input type="text" id="ackState">
+
+      <label>Zip:</label>
+      <input type="text" id="ackZip">
+
+      <hr>
+
+      <!-- Additional Information -->
+      <h2>Additional Information</h2>
+      <p>Please enter your name, company, or organization as you would like it to appear in our publications:</p>
+      <lebel>Name :</lebel>
+      <input type="text" id="publicationName" onblur="checkPublicationName()">
+
+      <label>
+        <input type="checkbox" id="anonymous"> I would like my gift to remain anonymous.
+      </label><br>
+
+      <label>
+        <input type="checkbox" id="matchingGift"> My employer offers a matching gift program. I will mail the matching gift form.
+      </label><br>
+
+      <label>
+        <input type="checkbox" id="newsletter"> Please save the cost of acknowledging this gift by not mailing a thank you letter.
+      </label><br>
+
+      <label>Comments:</label>
+      <textarea id="comments" placeholder="Enter your comments or feedback..."></textarea>
+
+      <div class="buttons">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    
+    </form>
+  </div>
+</body>
+</html>
