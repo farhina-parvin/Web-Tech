@@ -1,0 +1,44 @@
+body {
+    font-family: Georgia, serif;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.old-book {
+    background-color: #d3d3d3;   /* Light gray */
+}
+
+.new-book {
+    background-color: #9ef5a0;   /* Light green */
+}
+
+#error {
+    color: red;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.space-left {
+    margin-left: 20px;
+}
+
+button {
+    padding: 6px 14px;
+    margin-left: 10px;
+    font-size: 16px;
+}
